@@ -6,7 +6,7 @@
 	<groupId>com.nisum</groupId>
 	<artifactId>training</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>training</name>
 	<description>Demo project for Spring Boot</description>
