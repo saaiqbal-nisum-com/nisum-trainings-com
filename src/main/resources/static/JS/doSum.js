@@ -9,7 +9,7 @@ function doSum() {
 	if (isNaN(fn) || isNaN(ln)) {
 		document.getElementById("result").innerHTML = "Please enter only numbers.";
 	} else {
-		$.getJSON("/page2/" + fn + "/" + ln,
+		$.getJSON("page2/" + fn + "/" + ln,
 			function(data) {
 				document.getElementById("result").innerHTML = "Sum of the above two numbers is " + data;
 			});

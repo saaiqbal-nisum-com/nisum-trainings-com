@@ -4,7 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.nisum</groupId>
     <artifactId>training</artifactId>
-    <version>0.1.0</version>
+    <version>0.0.1</version>    
+    <packaging>war</packaging>
 <parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -12,6 +13,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
     <properties>
+    	<start-class>mypackage.App</start-class>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
@@ -27,16 +29,21 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
-        <dependency>
+      <!--   <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
-        </dependency>
+        </dependency> -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
+		</dependency>  
     </dependencies>
     <build>
     <finalName>${project.artifactId}</finalName>

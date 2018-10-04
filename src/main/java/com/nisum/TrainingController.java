@@ -22,6 +22,11 @@ public class TrainingController {
 	
 	private final Logger LOGGER = LoggerFactory.getLogger(this.getClass());
 	
+	@GetMapping("/page1")
+    public String getPage1(){ 
+           	return "page1";   
+     }
+	
 	@GetMapping("/page2")
     public String getPage2(){ 
            	return "page2";   
