@@ -4,51 +4,33 @@
 <title>Nisum Training Application</title>
 <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 <body style="background-color: #04a6d2; font-family: sans-serif;">
 	<nav class="navbar navbar-default">
 	<div class="container-fluid">
-		<div class="navbar-header">
-			<a class="navbar-brand" href="/">Nisum Training Application</a>
-		</div>
 		<div id="navbar" class="collapse navbar-collapse">
-			<ul class="nav navbar-nav">
-				<li><a href="/">Page 1</a></li>
-				<li><a href="/page2">Page 2</a></li>
-				<li><a href="/page3">Page 3</a></li>
-			</ul>
-		</div>
+				<ul class="nav navbar-nav" style="font-size: 32px;  width: 100%; text-align: center;">
+					<li style="float: none; display: inline-block;"><a href="/">Page 1</a></li>
+					<li style="float: none; display: inline-block;"><a style="margin-left: 60px;margin-right: 60px;" href="/page2">Page 2</a></li>
+					<li style="float: none; display: inline-block;"><a href="/page3">Page 3</a></li>
+				</ul>
+			</div>
 		</div>
 	</nav>
-	<form class="my-form">
-  Enter first number:<br>
-  <input required="required" type="number" id="n1"><br>
-  Enter second number:<br>
-  <input required="required" type="number" id="n2"><br><br>
-  <input  onclick="doSum();" type="button" value="Sum">
+	<div class="container text-center">
+	<form style="margin-top: 100px;"  class="my-form" method="post">
+  Enter first number:
+  <input style="margin-right: 50px;" required="required" type="text" id="n1">
+  Enter second number:
+  <input required="required" type="text" id="n2"><br><br>
+  <input onclick="doSum();" type="button" value="Sum">
 </form>
 <br><br>
-<p id="demo2"></p>
+<p style="font-weight: bolder;" id="result"></p>
+</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-function doSum() {
-    var fn, ln, result; 
-    fn = parseInt(document.getElementById("n1").value, 10);
-    ln = parseInt(document.getElementById("n2").value, 10);
-    result =  (fn+ln); 
-    
-    if (isNaN(fn) || isNaN(ln)) {
-    	document.getElementById("demo2").innerHTML = "Please fill both fields and with only numbers.";
-    } else {
-/*     	document.getElementById("demo2").innerHTML = "Sum of the above two numbers is " +  result + "";
- */
-    	var url= "/page2/"+fn+"/"+ln; 
-        window.location = url; 
-    }  
-}
-</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="JS/doSum.js"></script>
 </body>
 </html>
