@@ -46,7 +46,14 @@ function doSum() {
 /*     	document.getElementById("demo2").innerHTML = "Sum of the above two numbers is " +  result + "";
  */
     	var url= "/page2/"+fn+"/"+ln; 
-        window.location = url; 
+       	//window.location = url;
+    	$.getJSON("http://localhost:8080/page2/"+fn+"/"+ln,  
+    		       function(data) {
+    		document.getElementById("demo2").innerHTML = "Sum of the above two numbers is " +  data ;      
+    		       });
+    	
+    	
+   
     }  
 }
 </script>
