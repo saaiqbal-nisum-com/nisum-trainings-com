@@ -125,3 +125,7 @@ A more detailed git command list is as follows:
 | `git log` | View changes |
 | `git log --summary` | View changes (detailed) |
 | `git diff [source branch] [target branch}` | Preview changes before merging |
+
+### Instructions to execute QA UI/browser Acceptance tests
+After the code is compiled and deployed, navigate to the folder qatests and execute the following command. Before executing the command, change the AUT url in the file qatests>src>test>properties>config.properties, change the value of attribute dash to the right url.
+mvn test package -Pintegration_tests
